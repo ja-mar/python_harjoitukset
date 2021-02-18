@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "python_harjoitukset-2",
+			"path": "../python_harjoitukset-2"
+		}
+	],
+	"settings": {
+		"github.remoteName": "ja-mar"
+	}
+}
