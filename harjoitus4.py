@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 
 class Ensimmainen_luokka:
-    x=2
+    x=3
 
 luokka_objekti = Ensimmainen_luokka()
 print(luokka_objekti.x)
