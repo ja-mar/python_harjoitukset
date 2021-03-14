@@ -53,7 +53,7 @@ def pythagora(): #!Luodaan funktio
             #! 2 laskutoimitus päättyy 
         print("Väärä valinta, kirjoita 1 tai 2")        
 
-    #! tiedustellaan haluaako käyttäjä tietää kolmion-pinta-alan 
+    #! tiedustellaanno haluaako käyttäjä tietää kolmion-pinta-alan 
     print("\nHaluatko viela tietaa kolmion pinta-alan? K/E")
     laskutoim = input("Vastauksesi: ")
     if laskutoim == "K" or laskutoim =="k":
