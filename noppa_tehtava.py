@@ -18,21 +18,21 @@ import random
 #muuta noppa kysyy uudelleen tahot
 #muuta noppien lukumaara kysyy noppaluvun uudelleen
 #lopeta lopettaa ohjelman
+def alusta_noppa():
+    tahoja = int(input("Anna tahojen maara "))
+    noppa = [i for i in range(1,tahoja+1)]
+    return noppa
 
-tahoja = input("Anna tahojen maara")
-tahot = int(tahoja)
-noppien_lkm = input("Anna noppien maara")
-n_lkm = int(noppien_lkm)
-
-
-noppa =[i for i in range(1,tahot+1)]
-
-print(noppa, "eka")
+def set_nop_lkm():
+    noppien_lkm = int(input("Anna noppien maara "))
+    return noppien_lkm
+    
+    #print(noppa, "eka")
 #nopan heitto
 def heitto():
     monesko = 1
     total = 0
-    while monesko <= n_lkm:
+    while monesko <= noppien_lkm ():
         store = random.choice(noppa) 
         print(store)
         total=total+store
@@ -43,13 +43,16 @@ def uudest():
     uudestaan = input("Haluatko heittää")
     if uudestaan == "K" or uudestaan == "k":
         heitto()
-        return
+        uudest()
     else:
         print("Kiitos hei!")
 
 #noppa1 = random.choice(noppa)
 #noppa2 = random.choice(noppa)
 #print(noppa1, noppa2)
+alusta_noppa()
+set_nop_lkm()
+print(set_nop_lkm)
 heitto()
 uudest()
 
@@ -58,4 +61,3 @@ uudest()
 #from random import randint
 #for i in range(n_lkm):
 #    print("noppa antaa: ", randint(1,6))
-5
