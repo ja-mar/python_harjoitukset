@@ -9,7 +9,10 @@ def pythagora(): #!Luodaan funktio
     while True:
         laskutoim = input("Anna valintasi ")
         if laskutoim == "1":
+            #! 1 laskutoimitus alkaa jossa lasketaan hypotenuusan pituus, käyttäjän antamien arvojen perustella.
             while True:
+                     #! try kokeilee onko syötetty numeroita
+                     #! jos ei, niin antaa virhe ilmoituksen ja anntaa mahdollisuus syöttää arvon udelleen
                 try:
                     kateetti1 = float(input("Anna ensimmainen kateetti: "))
                     break
@@ -24,7 +27,10 @@ def pythagora(): #!Luodaan funktio
             hypotenuusa = sqrt(kateetti1**2+kateetti2**2)
             print("\nHypotenuusan pituus on: ", hypotenuusa)
             break
-        elif laskutoim == "2":
+            #! 1 laskutoimitus päättyy
+
+            #! 2 laskutoimitus alkaa jossa lasketaan kateetin pituus, käyttäjän antamien arvojen perustella.
+        elif laskutoim == "2": 
             while True:
                 try:
                     kateetti1 = float(input("Anna ensimmainen kateetti: "))
@@ -44,18 +50,22 @@ def pythagora(): #!Luodaan funktio
             kateetti2 = sqrt(hypotenuusa**2-kateetti1**2)
             print("\nToisen kateetin pituus on: ", kateetti2)
             break
+            #! 2 laskutoimitus päättyy 
         print("Väärä valinta, kirjoita 1 tai 2")        
 
+    #! tiedustellaan haluaako käyttäjä tietää kolmion-pinta-alan 
     print("\nHaluatko viela tietaa kolmion pinta-alan? K/E")
     laskutoim = input("Vastauksesi: ")
     if laskutoim == "K" or laskutoim =="k":
         print("\nPinta-ala on: ", ((kateetti1*kateetti2)/2))
     
+    #! tiedustellaan haluaako käyttäjä laskea vielä lisaa.
     uudestaan = input("\nLasketaanko viela? K tai k jatkaa, mika tahansa muu lopettaa\n")
     if uudestaan == "K" or uudestaan == "k":
         pythagora()
     else:
         print("\nKiitos hei!")
     return
+    #! funktio päättyy
 
 pythagora() #!Kutsutaan funktio eli ohjelma alkaa
